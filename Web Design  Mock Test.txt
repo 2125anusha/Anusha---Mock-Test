@@ -1,0 +1,210 @@
+Web design Mock test - Anusha. M
+
+
+Part A:
+
+2.HTML Layout structure:
+HTML is a markup language where elements are defined using tags.
+The HTML layout structure defines how the content in a web page should be semanticallly placed for accessibility.
+The layout structure of HTMl is as follows:
+<html>
+  <head>
+  	<title>Title</Title>
+	<link rel="stylesheet"> /* To Link External Css file, And import Fontawesome or Bootstroop and other library css files */
+	<style></style>
+  </head>
+  <body>
+	<header>
+	    <nav></nav>
+	</header>
+
+	<main>
+ 	    <section></section>
+<	    <article></article>
+	</main>
+
+	<footer></footer>
+
+	<script>/* Can be placed anywhere in Head or Body, Internal or External Javascript file */</script>
+  </body>
+</html>
+
+----------------
+6.Position Absolute and Relative:
+
+Absolute: 
+The position is fixed in respect to position of its parent element.
+The do not follow normal document flow of page.
+Surrounding element's positions are affected.
+
+Relative: 
+The position is in relative to where the element is located.
+When you set its position using top or right, the distance is calculated relative to the position where this element is originally located.
+Surrounding elements are not affected, the space alotted for the relative element will remain.
+
+Example:
+
+<!-- in HTML: -->
+<div id="parent">
+   <div id="child"></div>
+</div>
+
+<!-- in css: -->
+#parent{
+   width:100px;
+   height:100px;
+   background-color:#0000ff;
+   position:relative;
+}
+#child{
+ width:50px;
+   height:50px;
+   background-color:#ff0000;
+   position:relative;
+   position:absoluete;
+   top:10px;
+   left:20px;
+}
+
+-------------------
+
+7. Display:None and Visibility Hidden:
+
+display:none: 
+with display type 'none', The element will not be present in the HTML. 
+It can be dynamically brought in or created using Javascript DOM using display - block/inline/inline-block. 
+There is no space allocated for the element with display none, when such element is displayed using block, the surround elements are affected.
+
+Visibility:Hidden: 
+When an element is set to visibility:hidden, the element is hidden from view but is still present in the html document.
+Portion of space that the element occupies is allocated and the surrounding elements are not affected when its visibility is hidden or shown.
+
+---------------------
+
+8.Link in HTML:
+Links are used to navigate from one page to another.
+The link can be Text,image or other elements.
+The links in HTML are displayed using the anchor tag <a>, the url is put under 'href' attribute.
+<a href="https://google.com" target="_blank">Link</a>
+
+The target attribute specifies how the link should be opened.
+By default the target is '_self' if not mentioned and the link is opened in same frame/tab window.
+With target='_parent', the link is opened in parent frame.
+With target='_top', the link opened in top of the document window, replacing every other content in the page.
+With target='_blank', the link can be opened in new tab window.
+
+--------------------------
+
+9.Semantic tag:
+Semantic tags are used for HTML standard to describe the structure of the page.
+They show the type of content that is being written which is good for accesibility in screen reader and organising.
+nav is symantic, it shows a navigation content will be placed in it,
+article is semantic - used for blog or news posts type of content
+summary is semantic - used with <details> tag to give heading 
+
+DIV element is Not a semantic tag, it does not specifically define the type of content in it, the content can be anything.
+
+-----------------------------
+-----------------------------
+
+
+Part B:
+
+
+2.a)Inline and Block elements:
+Block Elements:
+They take up full of width of document by default even if there is less content in it. Example : <div>, <p>
+The next element is placed in next line.
+We can set width and height and use align property.
+
+Inline-Elements :
+They take up only the actual space of the element. Example: <span>, <a>
+The elements around it are placed right next to inline element.
+We can not specify width and height for inline elements.
+
+
+b)
+let span = document.getElementById('demo');
+span.textContent=content;
+
+
+----------------------------
+
+3.a)
+
+Web Storage:
+In order to reduce server load time we can use the storage in browser to temporarily store data before sending it to the server.
+There are 2 types of storage possible in JS: 
+Local Storage and Seession Storage
+Each Type of storage is allocated a specific amount of storage.
+In The Local Storage the data can be stored for a longer duration compared to session storage and can be accessed even when window is closed and opened at another time.
+It can be accessed between tabs.
+Whereas Session Storage, the data is accessible only within the session until the window remains open, and data can not be accessed between the tabs/windows.
+
+b) (code in folder attached in mail)
+
+---------------------------
+
+4 a)
+'flex-box' is not a value of display property.
+
+
+b)
+@media only screen and (min-width:600px){
+   p{
+     color:#f00;
+     font-size:1.5em;
+    }
+}
+
+------------------------
+
+6.) 
+
+Hoisting:
+In Javascript Hoisting is when variables are declared in top of the code.
+The 'var' type variables can be used before declaraing.
+It will result as - 'Undefined', but will not throw error as the browser can recognise the variable even before declaring.
+
+But, when using 'Let' variable, it throws 'Reference error' and when using 'constant' variables it throws 'syntax' error.
+
+x=10; //assigning value, so x i used before declaring
+var x;  // declaring variable
+console.log(x) // Undefined
+
+
+Closure:
+Closure means the functions in inner level can access the variables and parameters of outer functions.
+A closure is created whenever a function is created.
+
+
+--------------------------
+8.) 
+a) '==' operator checks if values of variables are true
+   '===' operator checks if both Value and Type of variable match
+
+b)
+var : var variables have Function scope, the var variables declared within the function can be accessed only inside that function where declared.
+var variables can be used before initialisation through hoisting.
+New values can be assigned and existing altered.
+
+let : was introduced in ecma 2015, its scope is of Block scope. The blocks are denoted by curly braces. 
+You will get Reference error if accessed before declaring.
+New value can be re-assigned.
+
+constant: just like let, constant was introduced with ecma6, and has block scope.
+Constant can not be used before initialisation.
+The value can not be changed, that is new value can not be assigned for constant.
+
+
+
+
+-------------------------
+-------------------------
+
+Part C:
+
+(code in folder attached in mail)
+
+
+
